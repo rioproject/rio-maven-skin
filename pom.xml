@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.rioproject</groupId>
+    <artifactId>rio-maven-skin</artifactId>
+    <version>1.0</version>
+    <name>Maven Skin for Rio</name>
+    <description>Maven Skin for Rio</description>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Rio Project</name>
+        <url>http://www.rio-project.org</url>
+    </organization>
+
+    <distributionManagement>
+        <repository>
+            <id>rio</id>
+            <name>Rio Repository</name>
+            <url>scp://www.rio-project.org/var/www/maven2</url>
+        </repository>        
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>rio</id>
+            <url>http://www.rio-project.org/maven2</url>
+        </repository>
+    </repositories>
+
+    <build>
+		<extensions>
+	        <extension>
+		        <groupId>org.apache.maven.wagon</groupId>
+		        <artifactId>wagon-ssh</artifactId>
+		        <version>1.0-beta-6</version>
+		      </extension>
+	    </extensions>
+    </build>
+
+</project>
